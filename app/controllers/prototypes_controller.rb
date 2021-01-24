@@ -9,6 +9,12 @@ class PrototypesController < ApplicationController
   end
 
   def create
+    @prototype = Prototype.new(prototype_params)
+    if @prototype.save #←のsaveは、単にdbへ保存する動き、createはnewからsaveまでrailsの仕組みによって最適化してくれている
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
 end
