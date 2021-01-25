@@ -21,6 +21,8 @@ class PrototypesController < ApplicationController
   end
 
   def edit
+  binding.pry
+    @prototype = Prototype.find(params[:id])
   end
 
   def update
