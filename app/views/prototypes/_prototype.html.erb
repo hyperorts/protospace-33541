@@ -5,6 +5,6 @@
     <p class="card__summary">
       <%= prototype.catch_copy %>
     </p>
-    <%= link_to "おれの名を言ってみろ！ #{prototype.user.name}だー！！", root_path, class: :card__user %>
+    <%= link_to "おれの名を言ってみろ！ #{prototype.user.name}だー！！", user_path(prototype.user_id), class: :card__user %> <%# (prototype.user ./_id どちらでも使える。正しくはカラム内の_%>
   </div>
 </div>
