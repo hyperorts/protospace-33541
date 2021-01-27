@@ -2,7 +2,7 @@
   <div class="inner">
     <% if user_signed_in? %>
       <div class="greeting">
-      おっす！！
+      こんにちは、
       <%= link_to "#{current_user.name}さん", user_path(current_user.id), class: :greeting__link%> <%#　←ログインしているユーザなのでこの組み合わせ %>
       </div>
     <% end %>
